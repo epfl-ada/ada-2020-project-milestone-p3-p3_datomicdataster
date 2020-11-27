@@ -29,7 +29,7 @@ Compute a “venue social score” for each Point of Interest:<br>
 * Either by manually assigning a score (0, 1 or 2 ) for each venue (eg. shop, bar, post office...) according to the level of social interaction in said venue.<br>
 * Or by computing the social scores based on factors such as popularity, average time of check-ins, frequency of visits, etc.<br>
 
-Determine two clusters of users: frequent travelers or not. Depending on the number of checkins aboard, we will compute and interpret the following to determine clusters:<br>
+Determine two clusters of users: frequent travelers or not. Depending on the number of checkins abroad, we will compute and interpret the following to determine clusters:<br>
 * The ratio of abroad_checkins/local_checkins<br>
 * The ratio of abroad_checkins/total_checkins<br>
 * Simply the number of abroad_checkins<br>
