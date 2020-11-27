@@ -66,9 +66,9 @@ Make a short video presenting our work<br>
 During week 1, Thomas will work on merging the different datasets together, cleaning the data to make it ready for the analysis. <br>
 In parallel, Leo and Shadi will get an understanding of how Jekyll works by following tutorials and reading the documentation, and will start making a quick template of the data story.<br>
 
-During week 2, after the data is clean and the website is thought of, Leo will start making a first analysis of the dataset and try to answer some the questions we have defined. Shadi will work with him to create a model calculating how many friends a particular user will make / lose. These two team members will try to improve the accuracy of the model as best as they can (by tuning the hyperparameters, try out different methods, etc). Thomas wills start writing text for the data story.
+During week 2, after the data is clean and the website is thought of, Leo will start making a first analysis of the dataset and try to answer some the questions we have defined. Shadi will work with him to create a model calculating how many friends a particular user will make / lose. These two team members will try to improve the accuracy of the model as best as they can (by tuning the hyperparameters, try out different methods, etc). Thomas will start writing text for the data story.
 
 During week 3, all team members will work together to finalise the analysis and write the story on the website. Thomas will take lead this step and will also make the short video (as his native language is english).
 
-Questions for TAs (optional)
+**8. Questions for TAs (optional)**
 Shall we give each venue an empirical “venue social score” ourselves, or should we calculate it according to check-in and friendship data?
