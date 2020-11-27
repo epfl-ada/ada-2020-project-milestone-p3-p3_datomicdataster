@@ -37,6 +37,7 @@ Other alternatives that will consider and compare are the follwing:
 * Use the ratio of max "venue social scores" and total checkins: user_score = sum(venue_score==2)/(total_checkins)<br>
 * Use the value of the most frequent social score<br>
 * Compare the ratio of max "venue social scores" and other "venue social scores": user_score = sum(venue_score==2)/sum(venue_score==0 or 1)<br>
+
 This will allow us to group each user into social categories<br>
 
 By using the snapshots of old and new friendships, we train a model in order to predict the dynamics of friendships, considering the traveler or not clusters as well as their social score. Finally, we will use cross validation to improve our predication accuracy.<br>
