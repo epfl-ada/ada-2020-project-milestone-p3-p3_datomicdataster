@@ -29,12 +29,14 @@ Compute a “venue social score” for each Point of Interest:<br>
 * Either by manually assigning a score (0, 1 or 2 ) for each venue (eg. shop, bar, post office...) according to the level of social interaction in said venue.<br>
 * Or by computing the social scores based on factors such as popularity, average time of check-ins, frequency of visits, etc.<br>
 
-Determine two clusters of users: frequent travelers or not:<br>
-Depending on the number of checkins aboard, we either compute and interpret the ratio of abroad_checkins/local_checkins, the ratio of abroad_checkins/total_checkins or simply the number of abroad_checkins.<br>
+Determine two clusters of users: frequent travelers or not. Depending on the number of checkins aboard, we will compute and interpret the following to determine clusters:<br>
+* The ratio of abroad_checkins/local_checkins<br>
+* The ratio of abroad_checkins/total_checkins<br>
+* Simply the number of abroad_checkins<br>
 
 Categorise the users within the two clusters according to their type of mobility (social-motivated or not). <br>
-We will compute a "user social score" according to their habits, for example we would use the average social score of their visited venues.<br>
-Other alternatives that will consider and compare are the follwing:
+We will compute a "user social score" according to their habits, for example we would one of the following:
+* Use the average social score of their visited venues.<br>
 * Use the ratio of max "venue social scores" and total checkins: user_score = sum(venue_score==2)/(total_checkins)<br>
 * Use the value of the most frequent social score<br>
 * Compare the ratio of max "venue social scores" and other "venue social scores": user_score = sum(venue_score==2)/sum(venue_score==0 or 1)<br>
