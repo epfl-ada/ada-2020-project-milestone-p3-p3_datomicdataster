@@ -20,7 +20,7 @@ While the paper explores the effects of friendships on mobility, we propose to s
 <a href=https://drive.google.com/file/d/1PNk3zY8NjLcDiAbzjABzY5FiPAFHq6T8/view>Click here to access dataset</a>
 
 **5. Methods**<br>
-We will first compute users’ homes with a similar approximation as in our replicated paper:<br>
+Compute users’ homes with a similar approximation as in our replicated paper:<br>
 * Divide the world in grid cells (e.g. 25kmx25km)<br>
 * Find the world cell with the most check ins for each user<br>
 * Compute the home location by averaging the positions of all checkins inside the cell<br>
@@ -35,15 +35,15 @@ Determine two clusters of users: frequent travelers or not. Depending on the num
 * Simply the number of abroad_checkins<br>
 
 Categorise the users within the two clusters according to their type of mobility (social-motivated or not). <br>
-We will compute a "user social score" according to their habits, for example we would one of the following:
-* Use the average social score of their visited venues.<br>
+We will compute a "user social score" according to their habits, for example we would do one of the following (**for each individual user**):
+* Use the average social score of their visited venues<br>
 * Use the ratio of max "venue social scores" and total checkins: user_score = sum(venue_score==2)/(total_checkins)<br>
 * Use the value of the most frequent social score<br>
 * Compare the ratio of max "venue social scores" and other "venue social scores": user_score = sum(venue_score==2)/sum(venue_score==0 or 1)<br>
 
 This will allow us to group each user into social categories<br>
 
-By using the snapshots of old and new friendships, we train a model in order to predict the dynamics of friendships, considering the traveler or not clusters as well as their social score. Finally, we will use cross validation to improve our predication accuracy.<br>
+By using the snapshots of old and new friendships, we train a model in order to predict the dynamics of friendships, considering the traveler or not clusters as well as their social score. We will use cross validation to improve our predication accuracy.<br>
 
 **6. Proposed timeline**
 
