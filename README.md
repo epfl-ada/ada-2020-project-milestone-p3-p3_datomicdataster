@@ -20,14 +20,14 @@ While the paper explores the effects of friendships on mobility, we propose to s
 <a href=https://drive.google.com/file/d/1PNk3zY8NjLcDiAbzjABzY5FiPAFHq6T8/view>Click here to access dataset</a>
 
 **5. Methods**<br>
-Compute users’ homes with a similar approximation as in our replicated paper:<br>
-Divide the world in grid cells (e.g. 25kmx25km)<br>
-Find the world cell with the most check ins for each user<br>
-Compute the home location by averaging the positions of all checkins inside the cell<br>
+We will first compute users’ homes with a similar approximation as in our replicated paper:<br>
+* Divide the world in grid cells (e.g. 25kmx25km)<br>
+* Find the world cell with the most check ins for each user<br>
+* Compute the home location by averaging the positions of all checkins inside the cell<br>
 
 Compute a “venue social score” for each Point of Interest:<br>
-Either by manually assigning a score (0, 1 or 2 ) for each venue (eg. shop, bar, post office...) according to the level of social interaction in said venue.<br>
-Or by computing the social scores based on factors such as popularity, average time of check-ins, frequency of visits, etc.<br>
+* Either by manually assigning a score (0, 1 or 2 ) for each venue (eg. shop, bar, post office...) according to the level of social interaction in said venue.<br>
+* Or by computing the social scores based on factors such as popularity, average time of check-ins, frequency of visits, etc.<br>
 
 Determine two clusters of users: frequent travelers or not:<br>
 Depending on the number of checkins aboard, we either compute and interpret the ratio of abroad_checkins/local_checkins, the ratio of abroad_checkins/total_checkins or simply the number of abroad_checkins.<br>
