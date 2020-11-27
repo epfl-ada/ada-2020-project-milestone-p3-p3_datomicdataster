@@ -8,9 +8,9 @@ While the paper explores the effects of friendships on mobility, we propose to s
 
 
 **3. Research questions**<br>
-Depending on the sociability of users, how does mobility influence friendships?<br>
-Can we modelize and predict the dynamics of friendships based on user habits?<br>
-What factors will cause users to gain or lose friendships in a defined 22 month period?<br>
+* Depending on the social behaviour of users, how does mobility influence friendships?<br>
+* Can we modelise and predict the dynamics of friendships based on user habits?<br>
+* What factors will cause users to gain or lose friendships in a defined 22 month period?<br>
 
 **4. Proposed datasets**<br>
 Global-scale Check-in Dataset collected from Foursquare<br>
