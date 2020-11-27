@@ -13,9 +13,9 @@ While the paper explores the effects of friendships on mobility, we propose to s
 * What factors will cause users to gain or lose friendships in a defined 22 month period?<br>
 
 **4. Proposed datasets**<br>
-Global-scale Check-in Dataset collected from Foursquare<br>
-Two snapshots of user social networks before and after the check-in data collection period<br>
-Locations information from Foursquare<br>
+* Global-scale Check-in Dataset collected from Foursquare<br>
+* Two snapshots of user social networks before and after the check-in data collection period<br>
+* Locations information from Foursquare<br>
 <a href=https://drive.google.com/file/d/1PNk3zY8NjLcDiAbzjABzY5FiPAFHq6T8/view>Click here to access dataset</a>
 
 **5. Methods**<br>
