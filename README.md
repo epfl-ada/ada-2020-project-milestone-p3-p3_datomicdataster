@@ -43,7 +43,7 @@ We will compute a "user social score" according to their habits, for example we 
 
 This will allow us to group each user into social categories<br>
 
-By using the snapshots of old and new friendships, we train a model in order to predict the dynamics of friendships, considering the traveler or not clusters as well as their social score. We will use cross validation to improve our predication accuracy.<br>
+By using the snapshots of old and new friendships, we train a model in order to predict the dynamics of friendships, considering the traveler or not clusters as well as their social score. We will use cross validation and other selected methods to improve our predication accuracy.<br>
 
 **6. Proposed timeline**
 
