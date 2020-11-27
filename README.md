@@ -8,16 +8,15 @@ While the paper explores the effects of friendships on mobility, we propose to s
 
 
 **3. Research questions**<br>
-Does mobility influence friendship dynamics?<br>
 Depending on the sociability of users, how does mobility influence friendships?<br>
-Can we predict / modelize the dynamics of friendships based on mobility and sociability of users?<br>
-Are users going to gain or lose friendships in the next 22 month period?<br>
+Can we modelize and predict the dynamics of friendships based on user habits?<br>
+What factors will cause users to gain or lose friendships in a defined 22 month period?<br>
 
 **4. Proposed datasets**<br>
 Global-scale Check-in Dataset collected from Foursquare<br>
 Two snapshots of user social networks before and after the check-in data collection period<br>
 Locations information from Foursquare<br>
-
+<a href=https://drive.google.com/file/d/1PNk3zY8NjLcDiAbzjABzY5FiPAFHq6T8/view>Click here to access dataset</a>
 
 **5. Methods**<br>
 Compute users’ homes with a similar approximation as in our replicated paper:<br>
@@ -25,37 +24,22 @@ Divide the world in grid cells (e.g. 25kmx25km)<br>
 Find the world cell with the most check ins for each user<br>
 Compute the home location by averaging the positions of all checkins inside the cell<br>
 
-Compute a “social score” for each Point of Interest:<br>
-Assign manually a social score (0 to 2 ) for each POI (=shop, restaurant, bar or other public places and stores):<br>
-Social score 0: The POI does not encourage social interactions, like a post office<br>
-Social score1: Social interactions and new meetings can occur in those POIs, like a restaurant<br>
-Social score 2: The POI is a social meeting place where there is a lot of social interaction, like a bar or a club<br>
-Automatically compute social scores based on mystic factors analysing the dataset<br>
+Compute a “venue social score” for each Point of Interest:<br>
+Either by manually assigning a score (0, 1 or 2 ) for each venue (eg. shop, bar, post office...) according to the level of social interaction in said venue.<br>
+Or by computing the social scores based on factors such as popularity, average time of check-ins, frequency of visits, etc.<br>
 
+Determine two clusters of users: frequent travelers or not:<br>
+Depending on the number of checkins aboard, we either compute and interpret the ratio of abroad_checkins/local_checkins, the ratio of abroad_checkins/total_checkins or simply the number of abroad_checkins.<br>
 
-Determine the type of user (Traveler or not):<br>
-Depending on the number of checkins aboard, we either:<br>
-Compute and interpret the ratio aboard_checkins/local_checkins, by comparing it to a threshold<br>
-Or simply use a threshold on the number of aboard checkins instead of the ratio<br>
-Users are thus grouped into “Travelers” and “Locals”<br>
+Categorise the users within the two clusters according to their type of mobility (social-motivated or not). <br>
+We will compute a "user social score" according to their habits, for example we would use the average social score of their visited venues.<br>
+Other alternatives that will consider and compare are the follwing:
+* Use the ratio of max "venue social scores" and total checkins: user_score = sum(venue_score==2)/(total_checkins)<br>
+* Use the value of the most frequent social score<br>
+* Compare the ratio of max "venue social scores" and other "venue social scores": user_score = sum(venue_score==2)/sum(venue_score==0 or 1)<br>
+This will allow us to group each user into social categories<br>
 
-
-Categorise users (into 4-6 groups)  according to the type of mobility (social-motivated or not) and the type of user (Travelers or not) <br>
-For each type of user (“Travelers” and “Locals”):<br>
-Compute a social score for users’ mobility:<br>
- Either with the average social score of its visited POIs<br>
-Or by comparing the number of POIs with the maximum social score (2) to a threshold<br>
-Or with by comparing the ratio  score_2_POIs/score_0&1_POIs with a threshold<br>
-Group each type of user into 2 or 3 social categories<br>
-At the end we have 4 to 6 categories of user<br>
-
-
-By using the snapshots of old and new friendships, we train a model in order to predict the dynamics of friendships.<br>
-We use K-fold methods to increase accuracy<br>
-
-
-
-
+By using the snapshots of old and new friendships, we train a model in order to predict the dynamics of friendships, considering the traveler or not clusters as well as their social score. Finally, we will use cross validation to improve our predication accuracy.<br>
 
 **6. Proposed timeline**
 
@@ -66,24 +50,21 @@ All members finish their second part of the replication<br>
 
 **Week 2**: Develop and train a model that will predict the number of new connections a user will have after the data-collection period.<br>
 Test this model on a testing set.<br>
-Improve the accuracy of this model by tuning hyperparameters, etc<br>
+Improve the accuracy of this model by tuning hyperparameters, etc.<br>
 Start to look at how Jekyll works (we will be making a data story and not a pdf report)<br>
 
-**Week 3**: Continue with the analysis and the improving of the model, get ready to implement our story on our website. <br>
+**Week 3**: Continue with the analysis and the improving of the model.<br>
 Build the website. <br>
 Make a short video presenting our work<br>
-
-
-
 
 **7. Organization within the team**
 
 During week 1, Thomas will work on merging the different datasets together, cleaning the data to make it ready for the analysis. <br>
-In parallel, Shadi will get an understanding of how Jekyll works by following tutorials and reading the documentation, and will start making a quick template of the data story.<br>
+In parallel, Leo and Shadi will get an understanding of how Jekyll works by following tutorials and reading the documentation, and will start making a quick template of the data story.<br>
 
-During week 2, after the data is clean and the website is thought of, Leo will start making a first analysis of the dataset and try to answer some the questions we have defined. Shadi will work with him to create a model calculating how many friends a particular user will make / lose. These two team members will try to improve the accuracy of the model as best as they can (by tuning the hyperparameters, try out different methods, etc). 
+During week 2, after the data is clean and the website is thought of, Leo will start making a first analysis of the dataset and try to answer some the questions we have defined. Shadi will work with him to create a model calculating how many friends a particular user will make / lose. These two team members will try to improve the accuracy of the model as best as they can (by tuning the hyperparameters, try out different methods, etc). Thomas wills start writing text for the data story.
 
-During week 3, all team members will work together to finalise the analysis and write the story on the website. Thomas will take lead this step and will also make the short video (as his native language is english)
+During week 3, all team members will work together to finalise the analysis and write the story on the website. Thomas will take lead this step and will also make the short video (as his native language is english).
 
 Questions for TAs (optional)
-Shall we give each venue an empirical “social score” ourselves, or should we calculate it according to check-in and friendship data?
+Shall we give each venue an empirical “venue social score” ourselves, or should we calculate it according to check-in and friendship data?
