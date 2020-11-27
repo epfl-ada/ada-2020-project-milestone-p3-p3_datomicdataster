@@ -70,5 +70,5 @@ During week 2, after the data is clean and the website is thought of, Leo will s
 
 During week 3, all team members will work together to finalise the analysis and write the story on the website. Thomas will take lead this step and will also make the short video (as his native language is english).
 
-**8. Questions for TAs (optional)**
+**8. Questions for TAs (optional)**<br>
 Shall we give each venue an empirical “venue social score” ourselves, or should we calculate it according to check-in and friendship data?
